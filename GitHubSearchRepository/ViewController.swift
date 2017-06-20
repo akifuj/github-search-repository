@@ -24,12 +24,10 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        
         bindViewModel()
     }
     
     private func bindViewModel() {
-        
         searchResults.bind(to: tableView) { searchResults, indexPath, tableView in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             cell.textLabel?.text = searchResults[indexPath.row].name
