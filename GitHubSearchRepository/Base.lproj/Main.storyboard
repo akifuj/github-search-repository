@@ -12,7 +12,7 @@
         <!--Main View Controller-->
         <scene sceneID="dG4-m4-t0L">
             <objects>
-                <tableViewController id="RvJ-Kg-asx" customClass="MainViewController" customModule="GitHubSearchRepository" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainVC" id="RvJ-Kg-asx" customClass="MainViewController" customModule="GitHubSearchRepository" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="gRv-Vp-OOF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,9 +66,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="KwU-IJ-Jak">
-                        <barButtonItem key="rightBarButtonItem" title="Setting" id="H8H-QI-AuV">
+                        <barButtonItem key="rightBarButtonItem" title="setting" id="6mO-za-jaU" userLabel="Setting">
                             <connections>
-                                <action selector="showSettingVC:" destination="RvJ-Kg-asx" id="88R-R7-prJ"/>
+                                <action selector="showMainVC:" destination="RvJ-Kg-asx" id="cfb-gW-rSy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

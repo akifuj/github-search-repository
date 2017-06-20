@@ -16,7 +16,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    @IBAction func showSettingVC(_ sender: UIBarButtonItem) {
+    @IBAction func showMainVC(_ sender: UIBarButtonItem) {
         if let settingVC = storyboard?.instantiateViewController(withIdentifier: "SettingVC") as? SettingTableViewController {
             settingVC.sortTextField?.text = sort
             settingVC.orderTextField?.text = order

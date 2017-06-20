@@ -23,6 +23,9 @@ class SettingTableViewController: UITableViewController, UITextFieldDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
+        navigationItem.hidesBackButton = true
+        
         sortTextField.delegate = self
         orderTextField.delegate = self
         let screenWidth = self.view.frame.width
@@ -46,12 +49,22 @@ class SettingTableViewController: UITableViewController, UITextFieldDelegate, UI
         
         orderPickerView.delegate = self
         orderPickerView.dataSource = self
+        orderPickerView.frame = rect
         let orderView = UIView(frame: orderPickerView.bounds)
         orderView.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
         orderView.addSubview(orderPickerView)
         orderTextField.inputView = orderView
         orderTextField.inputAccessoryView = toolBar
-        
+    }
+    
+    func doneTapped() {
+        if let count = navigationController?.viewControllers.count {
+            if let MainVC =  navigationController?.viewControllers[count-2] as? MainViewController {
+                MainVC.sort = sortTextField.text!
+                MainVC.order = orderTextField.text!
+                navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     func setUpToolBar() -> UIToolbar {
