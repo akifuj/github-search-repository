@@ -33,6 +33,8 @@ class WebViewController: UITableViewController, WKNavigationDelegate {
         toolbarItems = [progressButton]
         navigationController?.isToolbarHidden = false
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(actionTapped))
     }
     
     deinit {
@@ -50,6 +52,25 @@ class WebViewController: UITableViewController, WKNavigationDelegate {
                navigationController?.isToolbarHidden = true
             }
         }
+    }
+    
+    func actionTapped() {
+        let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Oepn link in Safari", style: .default, handler: openPage))
+        ac.addAction(UIAlertAction(title: "Copy", style: .default, handler: copy))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(ac, animated: true)
+    }
+    
+    func openPage(action: UIAlertAction) {
+        let url = URL(string: html_url)
+        if( UIApplication.shared.canOpenURL(url!) ) {
+            UIApplication.shared.open(url!)
+        }
+    }
+    
+    func copy(action: UIAlertAction) {
+        UIPasteboard.general.string = html_url
     }
     
     override func didReceiveMemoryWarning() {
