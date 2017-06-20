@@ -29,9 +29,6 @@ class SettingTableViewController: UITableViewController, UITextFieldDelegate, UI
         sortTextField.frame = CGRect(x: screenWidth - 205, y: 9, width: 200, height: 40)
         orderTextField.frame = CGRect(x: screenWidth - 205, y: 9, width: 200, height: 40)
         
-        sortTextField.text = "none"
-        orderTextField.text = "desc"
-        
         let toolBar = setUpToolBar()
         let rect: CGRect = CGRect(x: 0, y: 0, width: screenWidth, height: sortPickerView.bounds.size.height)
         

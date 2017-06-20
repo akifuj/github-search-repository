@@ -16,10 +16,20 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBAction func showSettingVC(_ sender: UIBarButtonItem) {
+        if let settingVC = storyboard?.instantiateViewController(withIdentifier: "SettingVC") as? SettingTableViewController {
+            settingVC.sortTextField.text = sort
+            settingVC.orderTextField.text = order
+            navigationController?.pushViewController(settingVC, animated: true)
+        }
+    }
+
     let searchResults = MutableObservableArray<Repository>([])
     let alertMessages = PublishSubject<String, NoError>()
-    
     let bag = DisposeBag()
+    
+    var sort = "none"
+    var order = "desc"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +44,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
             cell.fullnameLabel.text = repository.fullname
             cell.descriptionLabel.text = repository.description
             cell.languageLabel.text = repository.language
+
             return cell
         }
         

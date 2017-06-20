@@ -65,7 +65,13 @@
                             <outlet property="delegate" destination="RvJ-Kg-asx" id="bub-88-gqA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="KwU-IJ-Jak"/>
+                    <navigationItem key="navigationItem" id="KwU-IJ-Jak">
+                        <barButtonItem key="rightBarButtonItem" title="Setting" id="H8H-QI-AuV">
+                            <connections>
+                                <action selector="showSettingVC:" destination="RvJ-Kg-asx" id="88R-R7-prJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="oqf-01-Wij" id="B0r-uU-WH4"/>
                     </connections>
@@ -95,7 +101,7 @@
         <!--Setting Table View Controller-->
         <scene sceneID="KXO-CA-Nh5">
             <objects>
-                <tableViewController id="mD8-Xj-QaX" customClass="SettingTableViewController" customModule="GitHubSearchRepository" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingVC" id="mD8-Xj-QaX" customClass="SettingTableViewController" customModule="GitHubSearchRepository" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lwQ-1A-3uX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
