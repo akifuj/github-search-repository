@@ -46,6 +46,14 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
             cell.languageLabel.text = repository.language
             return cell
         }
+        
+        _ = alertMessages.observeNext {
+            [weak self] message in
+            let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { action in return }
+            alertController.addAction(okAction)
+            self?.present(alertController, animated: true, completion: nil)
+            }.dispose(in: bag)
     }
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -62,7 +70,10 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
                 switch response.result {
                 case .success:
                     let json = JSON(response.data)
-                    if let message = json["message"] as? String {
+                    
+                    let message = json["message"].stringValue
+                    if message != "" {
+                        self.alertMessages.next("API rate limit exceeded")
                         return
                     }
                     self.searchResults.removeAll()
@@ -73,10 +84,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
                         }
                     }
                 case .failure(let error):
-                    let alertController = UIAlertController(title: "ERROR", message: error.localizedDescription, preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default) { action in return }
-                    alertController.addAction(okAction)
-                    self.present(alertController, animated: true, completion: nil)
+                    self.alertMessages.next(error.localizedDescription)
                 }
             }
         }
