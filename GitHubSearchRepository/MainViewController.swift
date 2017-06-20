@@ -18,8 +18,8 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     
     @IBAction func showMainVC(_ sender: UIBarButtonItem) {
         if let settingVC = storyboard?.instantiateViewController(withIdentifier: "SettingVC") as? SettingTableViewController {
-            settingVC.sortTextField?.text = sort
-            settingVC.orderTextField?.text = order
+            settingVC.sort = sort
+            settingVC.order = order
             navigationController?.pushViewController(settingVC, animated: true)
         }
     }
@@ -44,7 +44,6 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
             cell.fullnameLabel.text = repository.fullname
             cell.descriptionLabel.text = repository.description
             cell.languageLabel.text = repository.language
-
             return cell
         }
         
@@ -67,7 +66,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBySearchBarText() {
         if let searchText = searchBar.text {
-            Alamofire.request(Router.search(q: searchText, sort: "", order: "")).responseJSON { [unowned self] response in
+            Alamofire.request(Router.search(q: searchText, sort: sort, order: order)).responseJSON { [unowned self] response in
                 switch response.result {
                 case .success:
                     let json = JSON(response.data)

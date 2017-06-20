@@ -14,6 +14,9 @@ class SettingTableViewController: UITableViewController, UITextFieldDelegate, UI
     @IBOutlet weak var sortTextField: UITextField!
     @IBOutlet weak var orderTextField: UITextField!
     
+    var sort: String?
+    var order: String?
+    
     let sortList = ["", "starts", "forks", "updated"]
     let orderList = ["desc", "asc"]
     
@@ -32,8 +35,8 @@ class SettingTableViewController: UITableViewController, UITextFieldDelegate, UI
         sortTextField.frame = CGRect(x: screenWidth - 205, y: 9, width: 200, height: 40)
         orderTextField.frame = CGRect(x: screenWidth - 205, y: 9, width: 200, height: 40)
         
-        sortTextField.text = ""
-        orderTextField.text = "desc"
+        sortTextField.text = sort
+        orderTextField.text = order
         
         let toolBar = setUpToolBar()
         let rect: CGRect = CGRect(x: 0, y: 0, width: screenWidth, height: sortPickerView.bounds.size.height)
