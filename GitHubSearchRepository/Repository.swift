@@ -21,7 +21,7 @@ struct Repository {
     init(json: JSON) {
         self.id = json["id"].intValue
         self.name = json["name"].stringValue
-        self.fullname = json["fullname"].stringValue
+        self.fullname = json["full_name"].stringValue
         self.description = json["description"].stringValue
         self.language = json["language"].stringValue
         self.html_url = json["html_url"].stringValue
