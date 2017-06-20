@@ -14,8 +14,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     
-    let url: String? = nil
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

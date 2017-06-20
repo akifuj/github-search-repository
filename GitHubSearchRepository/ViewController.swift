@@ -29,8 +29,11 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     private func bindViewModel() {
         searchResults.bind(to: tableView) { searchResults, indexPath, tableView in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = searchResults[indexPath.row].name
+            let repository = searchResults[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+            cell.fullnameLabel.text = repository.fullname
+            cell.descriptionLabel.text = repository.description
+            cell.languageLabel.text = repository.language
             return cell
         }
         
