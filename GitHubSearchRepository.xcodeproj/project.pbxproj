@@ -147,13 +147,13 @@
 		B84DA7A81EF8A85600E6C4E9 /* GitHubSearchRepository */ = {
 			isa = PBXGroup;
 			children = (
-				B84DA7DD1EF8B54900E6C4E9 /* Utility */,
 				B84DA7A91EF8A85600E6C4E9 /* AppDelegate.swift */,
-				B84DA7DA1EF8B0D900E6C4E9 /* Repository.swift */,
 				B84DA7AB1EF8A85600E6C4E9 /* MainViewController.swift */,
-				B84DA7E41EF8F68B00E6C4E9 /* SettingTableViewController.swift */,
-				B84DA7E21EF8E90D00E6C4E9 /* WebViewController.swift */,
 				B84DA7E01EF8D92300E6C4E9 /* TableViewCell.swift */,
+				B84DA7E21EF8E90D00E6C4E9 /* WebViewController.swift */,
+				B84DA7E41EF8F68B00E6C4E9 /* SettingTableViewController.swift */,
+				B84DA7DA1EF8B0D900E6C4E9 /* Repository.swift */,
+				B84DA7DE1EF8B56B00E6C4E9 /* Router.swift */,
 				B84DA7B01EF8A85600E6C4E9 /* Assets.xcassets */,
 				B84DA7B21EF8A85700E6C4E9 /* LaunchScreen.storyboard */,
 				B84DA7B51EF8A85700E6C4E9 /* Info.plist */,
@@ -178,14 +178,6 @@
 				B84DA7CB1EF8A85700E6C4E9 /* Info.plist */,
 			);
 			path = GitHubSearchRepositoryUITests;
-			sourceTree = "<group>";
-		};
-		B84DA7DD1EF8B54900E6C4E9 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				B84DA7DE1EF8B56B00E6C4E9 /* Router.swift */,
-			);
-			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
