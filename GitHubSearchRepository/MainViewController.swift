@@ -12,14 +12,14 @@ import SwiftyJSON
 import Bond
 import ReactiveKit
 
-class ViewController: UITableViewController, UISearchBarDelegate {
+class MainViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBAction func showSettingVC(_ sender: UIBarButtonItem) {
         if let settingVC = storyboard?.instantiateViewController(withIdentifier: "SettingVC") as? SettingTableViewController {
-            settingVC.sortTextField.text = sort
-            settingVC.orderTextField.text = order
+            settingVC.sortTextField?.text = sort
+            settingVC.orderTextField?.text = order
             navigationController?.pushViewController(settingVC, animated: true)
         }
     }
@@ -28,7 +28,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     let alertMessages = PublishSubject<String, NoError>()
     let bag = DisposeBag()
     
-    var sort = "none"
+    var sort = ""
     var order = "desc"
     
     override func viewDidLoad() {

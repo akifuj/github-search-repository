@@ -10,7 +10,7 @@
 		452E8DEA80A1B1B0873E11B2 /* Pods_GitHubSearchRepositoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072775E86C8CB3269FD4D92 /* Pods_GitHubSearchRepositoryUITests.framework */; };
 		B8290133082BCFCECC6B3B2B /* Pods_GitHubSearchRepositoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023D0305C00D29F3932563E4 /* Pods_GitHubSearchRepositoryTests.framework */; };
 		B84DA7AA1EF8A85600E6C4E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DA7A91EF8A85600E6C4E9 /* AppDelegate.swift */; };
-		B84DA7AC1EF8A85600E6C4E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DA7AB1EF8A85600E6C4E9 /* ViewController.swift */; };
+		B84DA7AC1EF8A85600E6C4E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DA7AB1EF8A85600E6C4E9 /* MainViewController.swift */; };
 		B84DA7AF1EF8A85600E6C4E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84DA7AD1EF8A85600E6C4E9 /* Main.storyboard */; };
 		B84DA7B11EF8A85600E6C4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B84DA7B01EF8A85600E6C4E9 /* Assets.xcassets */; };
 		B84DA7B41EF8A85700E6C4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84DA7B21EF8A85700E6C4E9 /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		5F3A8C9BBEEC1E2AA5FA44A1 /* Pods-GitHubSearchRepositoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearchRepositoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearchRepositoryUITests/Pods-GitHubSearchRepositoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B84DA7A61EF8A85600E6C4E9 /* GitHubSearchRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearchRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84DA7A91EF8A85600E6C4E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B84DA7AB1EF8A85600E6C4E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B84DA7AB1EF8A85600E6C4E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B84DA7AE1EF8A85600E6C4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B84DA7B01EF8A85600E6C4E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B84DA7B31EF8A85700E6C4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				B84DA7DD1EF8B54900E6C4E9 /* Utility */,
 				B84DA7D71EF8AF8A00E6C4E9 /* Model */,
 				B84DA7A91EF8A85600E6C4E9 /* AppDelegate.swift */,
-				B84DA7AB1EF8A85600E6C4E9 /* ViewController.swift */,
+				B84DA7AB1EF8A85600E6C4E9 /* MainViewController.swift */,
 				B84DA7E41EF8F68B00E6C4E9 /* SettingTableViewController.swift */,
 				B84DA7E21EF8E90D00E6C4E9 /* WebViewController.swift */,
 				B84DA7E01EF8D92300E6C4E9 /* TableViewCell.swift */,
@@ -484,7 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84DA7E51EF8F68B00E6C4E9 /* SettingTableViewController.swift in Sources */,
-				B84DA7AC1EF8A85600E6C4E9 /* ViewController.swift in Sources */,
+				B84DA7AC1EF8A85600E6C4E9 /* MainViewController.swift in Sources */,
 				B84DA7AA1EF8A85600E6C4E9 /* AppDelegate.swift in Sources */,
 				B84DA7DF1EF8B56B00E6C4E9 /* Router.swift in Sources */,
 				B84DA7E11EF8D92400E6C4E9 /* TableViewCell.swift in Sources */,
