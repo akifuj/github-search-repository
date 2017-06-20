@@ -16,6 +16,7 @@ struct Repository {
     let owner: User
     let description: String
     let language: String
+    let url: String
     
     init(json: JSON) {
         self.id = json["id"].intValue
@@ -23,6 +24,7 @@ struct Repository {
         self.fullname = json["fullname"].stringValue
         self.description = json["description"].stringValue
         self.language = json["language"].stringValue
+        self.url = json["url"].stringValue
         self.owner = User(json: json["owner"])
     }
 }
