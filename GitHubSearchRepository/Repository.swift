@@ -14,11 +14,15 @@ struct Repository {
     let name: String
     let fullname: String
     let owner: User
+    let description: String
+    let language: String
     
     init(json: JSON) {
         self.id = json["id"].intValue
         self.name = json["name"].stringValue
         self.fullname = json["fullname"].stringValue
+        self.description = json["description"].stringValue
+        self.language = json["language"].stringValue
         self.owner = User(json: json["owner"])
     }
 }
