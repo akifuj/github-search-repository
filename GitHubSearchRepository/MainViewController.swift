@@ -46,14 +46,6 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
             cell.languageLabel.text = repository.language
             return cell
         }
-        
-        _ = alertMessages.observeNext {
-            [weak self] message in
-            let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { action in return }
-            alertController.addAction(okAction)
-            self?.present(alertController, animated: true, completion: nil)
-            }.dispose(in: bag)
     }
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

@@ -65,6 +65,7 @@ class SettingTableViewController: UITableViewController, UITextFieldDelegate, UI
             if let MainVC =  navigationController?.viewControllers[count-2] as? MainViewController {
                 MainVC.sort = sortTextField.text!
                 MainVC.order = orderTextField.text!
+                MainVC.searchBySearchBarText()
                 navigationController?.popViewController(animated: true)
             }
         }
