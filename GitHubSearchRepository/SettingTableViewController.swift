@@ -15,7 +15,7 @@ class SettingTableViewController: UITableViewController, UITextFieldDelegate, UI
     @IBOutlet weak var orderTextField: UITextField!
     
     let sortList = ["", "starts", "forks", "updated"]
-    let orderList = ["asc", "desc"]
+    let orderList = ["desc", "asc"]
     
     let sortPickerView = UIPickerView()
     let orderPickerView = UIPickerView()
