@@ -65,8 +65,8 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
                     if let message = json["message"] as? String {
                         return
                     }
+                    self.searchResults.removeAll()
                     if json["total_count"].intValue > 0 {
-                        self.searchResults.removeAll()
                         for (_, json) in json["items"] {
                             let repository = Repository(json: json)
                             self.searchResults.append(repository)
