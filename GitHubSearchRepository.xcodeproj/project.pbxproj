@@ -20,6 +20,7 @@
 		B84DA7DB1EF8B0D900E6C4E9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DA7DA1EF8B0D900E6C4E9 /* Repository.swift */; };
 		B84DA7DF1EF8B56B00E6C4E9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DA7DE1EF8B56B00E6C4E9 /* Router.swift */; };
 		B84DA7E11EF8D92400E6C4E9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DA7E01EF8D92300E6C4E9 /* TableViewCell.swift */; };
+		B84DA7E31EF8E90D00E6C4E9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DA7E21EF8E90D00E6C4E9 /* WebViewController.swift */; };
 		F4BEEEF1240C76294DB5BAD0 /* Pods_GitHubSearchRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2055C7EF981D12D905D166 /* Pods_GitHubSearchRepository.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		B84DA7DA1EF8B0D900E6C4E9 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B84DA7DE1EF8B56B00E6C4E9 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B84DA7E01EF8D92300E6C4E9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B84DA7E21EF8E90D00E6C4E9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C15719E7C5D2E11F6153AAC9 /* Pods-GitHubSearchRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearchRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearchRepository/Pods-GitHubSearchRepository.release.xcconfig"; sourceTree = "<group>"; };
 		DF2055C7EF981D12D905D166 /* Pods_GitHubSearchRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubSearchRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8A41D9226975CDF4837168 /* Pods-GitHubSearchRepositoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearchRepositoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearchRepositoryUITests/Pods-GitHubSearchRepositoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				B84DA7D71EF8AF8A00E6C4E9 /* Model */,
 				B84DA7A91EF8A85600E6C4E9 /* AppDelegate.swift */,
 				B84DA7AB1EF8A85600E6C4E9 /* ViewController.swift */,
+				B84DA7E21EF8E90D00E6C4E9 /* WebViewController.swift */,
 				B84DA7E01EF8D92300E6C4E9 /* TableViewCell.swift */,
 				B84DA7B01EF8A85600E6C4E9 /* Assets.xcassets */,
 				B84DA7B21EF8A85700E6C4E9 /* LaunchScreen.storyboard */,
@@ -481,6 +484,7 @@
 				B84DA7AA1EF8A85600E6C4E9 /* AppDelegate.swift in Sources */,
 				B84DA7DF1EF8B56B00E6C4E9 /* Router.swift in Sources */,
 				B84DA7E11EF8D92400E6C4E9 /* TableViewCell.swift in Sources */,
+				B84DA7E31EF8E90D00E6C4E9 /* WebViewController.swift in Sources */,
 				B84DA7D91EF8AFF000E6C4E9 /* User.swift in Sources */,
 				B84DA7DB1EF8B0D900E6C4E9 /* Repository.swift in Sources */,
 			);

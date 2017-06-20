@@ -80,6 +80,13 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let webVC = storyboard?.instantiateViewController(withIdentifier: "WebVC") as? WebViewController{
+            webVC.html_url = searchResults[indexPath.row].html_url
+            navigationController?.pushViewController(webVC, animated: true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

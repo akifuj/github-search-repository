@@ -23,11 +23,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="fWi-fM-PlC" customClass="TableViewCell" customModule="GitHubSearchRepository" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="fWi-fM-PlC" customClass="TableViewCell" customModule="GitHubSearchRepository" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fWi-fM-PlC" id="gw2-SW-2lg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLT-o7-PtC">
@@ -73,6 +73,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cju-5c-pgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1258.4000000000001" y="134.48275862068968"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="1uf-SV-FMr">
+            <objects>
+                <viewController storyboardIdentifier="WebVC" id="Jgc-3W-gX0" customClass="WebViewController" customModule="GitHubSearchRepository" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cZ3-ZM-MQp"/>
+                        <viewControllerLayoutGuide type="bottom" id="7eQ-4k-iQ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ksU-lU-MCE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKJ-60-eVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZIl-aD-rDZ">
